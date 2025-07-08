@@ -1,0 +1,128 @@
+.auth-container {
+    display: flex;
+    flex-direction: row;
+    height: 100vh;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #F8F8F8;
+  }
+  
+  .form-section {
+    flex: 1;
+    padding: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #ffffff;
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.04);
+  }
+  
+  .form-section h1 {
+    font-size: 34px;
+    color: #2C2C2C;
+    margin-bottom: 12px;
+  }
+  
+  .form-section p {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 24px;
+  }
+  
+  .form-section form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  
+  .form-section input {
+    padding: 12px;
+    font-size: 16px;
+    background-color: #FAFAFA;
+    border: 1px solid #CCC;
+    border-radius: 8px;
+    transition: 0.3s;
+  }
+  
+  .form-section input:focus {
+    border-color: #6FD18C;
+    outline: none;
+    background-color: #E7FAEF;
+  }
+  
+  .form-section button {
+    padding: 14px;
+    font-size: 16px;
+    font-weight: bold;
+    background-color: #6FD18C;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .form-section button:hover {
+    background-color: #57B674;
+  }
+  
+  .form-section a {
+    color: #4D9375;
+    text-decoration: none;
+  }
+  
+  .form-section a:hover {
+    text-decoration: underline;
+  }
+  
+  .image-section {
+    flex: 1;
+    background-color: #E7FAEF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .image-section img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  /* ✅ Responsive Design */
+  @media (max-width: 1024px) {
+    .auth-container {
+      flex-direction: column;
+    }
+  
+    .image-section {
+      height: 300px;
+    }
+  
+    .form-section {
+      padding: 40px;
+    }
+  }
+  
+  @media (max-width: 600px) {
+    .form-section {
+      padding: 20px;
+    }
+  
+    .form-section h1 {
+      font-size: 28px;
+    }
+  
+    .form-section p {
+      font-size: 14px;
+    }
+  
+    .form-section input,
+    .form-section button {
+      font-size: 14px;
+    }
+  
+    .image-section {
+      display: none; /* Hide image completely on very small screens */
+    }
+  }
+  
