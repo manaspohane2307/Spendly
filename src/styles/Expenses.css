@@ -1,0 +1,338 @@
+/* Expenses Page Styles */
+
+.expenses-page {
+    padding: 4rem 2rem 2rem;
+    background-color: #F8F8F8;
+    font-family: 'Poppins', sans-serif;
+    color: #2C2C2C;
+  }
+
+  /* Heading and Controls */
+  .expenses-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: 2rem;
+  }
+
+  .expenses-heading {
+    font-size: 2rem;
+    font-weight: 600;
+  }
+
+  .expenses-controls {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+
+  .add-expense-btn,
+  .download-btn {
+    background-color: #6FD18C;
+    color: white;
+    border: none;
+    padding: 0.6rem 1.2rem;
+    font-weight: 500;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    text-decoration: none;
+  }
+
+  .add-expense-btn:hover,
+  .download-btn:hover {
+    background-color: #4D9375;
+    transform: translateY(-1px);
+  }
+
+  /* Cards */
+  .expenses-cards {
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+    margin-bottom: 2rem;
+  }
+
+  .expenses-card {
+    flex: 1;
+    min-width: 220px;
+    background-color: #6FD18C;
+    color: white;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  }
+
+  .expenses-card p {
+    margin: 0;
+    font-weight: 500;
+  }
+
+  .expenses-card h2 {
+    margin-top: 0.5rem;
+  }
+
+  /* Filters */
+  .expenses-filters {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+  }
+
+  .expenses-filters label {
+    font-size: 14px;
+    color: #333;
+  }
+
+  .expenses-filters select,
+  .expenses-filters input {
+    margin-left: 0.5rem;
+    padding: 0.4rem 0.7rem;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-family: 'Poppins', sans-serif;
+  }
+
+  /* Charts */
+  .expenses-chart,
+  .expenses-pie-chart {
+    background-color: #E7FAEF;
+    padding: 1rem;
+    border-radius: 12px;
+    margin-bottom: 2rem;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.08);
+  }
+
+  /* Section Table */
+  .expenses-section {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.08);
+    margin-bottom: 2rem;
+  }
+
+  .expenses-section h2 {
+    margin-bottom: 1rem;
+  }
+
+  .expenses-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+  }
+
+  .expenses-table th,
+  .expenses-table td {
+    padding: 0.75rem;
+    border: 1px solid #ccc;
+    text-align: left;
+  }
+
+  .expenses-table th {
+    background-color: #6FD18C;
+    color: white;
+  }
+
+  .expenses-table td {
+    color: #555;
+  }
+
+  .expenses-table button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    margin: 0 4px;
+  }
+
+  /* Modal Overlay and Form */
+  .modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    backdrop-filter: blur(5px);
+    background-color: rgba(0, 0, 0, 0.3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+
+  .modal-card {
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 12px;
+    width: 90%;
+    max-width: 500px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+  }
+
+  .modal-card h2 {
+    margin-bottom: 1rem;
+  }
+
+  .modal-card form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .modal-card input,
+  .modal-card select {
+    padding: 0.7rem;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-family: 'Poppins', sans-serif;
+  }
+
+  .modal-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
+  }
+
+  .modal-btn {
+    padding: 0.5rem 1.2rem;
+    border-radius: 6px;
+    font-weight: 500;
+    cursor: pointer;
+    border: none;
+  }
+
+  .modal-btn.save {
+    background-color: #6FD18C;
+    color: white;
+  }
+
+  .modal-btn.save:hover {
+    background-color: #4D9375;
+  }
+
+  .modal-btn.cancel {
+    background-color: #ccc;
+    color: #333;
+  }
+
+  .modal-btn.cancel:hover {
+    background-color: #bbb;
+  }
+
+  /* Insights Section */
+  .insights-section {
+    margin-top: 2rem;
+  }
+
+  .insights-section h2 {
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+  }
+
+  .insight-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+  }
+
+  .insight-card {
+    flex: 1;
+    min-width: 250px;
+    background-color: #A8E6CF;
+    padding: 1.2rem;
+    border-radius: 12px;
+    color: #2C2C2C;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.08);
+  }
+
+  .insight-card h3 {
+    font-size: 1rem;
+    margin-bottom: 0.3rem;
+  }
+
+  .insight-card p {
+    font-size: 1.2rem;
+    font-weight: 600;
+  }
+
+  /* Responsive */
+  @media (max-width: 768px) {
+    .expenses-controls {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    .expenses-filters {
+      flex-direction: column;
+    }
+
+    .modal-card {
+      width: 95%;
+    }
+
+    .insight-cards {
+      flex-direction: column;
+    }
+  }
+
+  /* FAQ-style Useful Insights */
+.insights-faq-section {
+    margin-top: 3rem;
+    padding: 2rem;
+    background-color: #E7FAEF;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  }
+
+  .insights-faq-section h2 {
+    margin-bottom: 1rem;
+    font-size: 1.6rem;
+    color: #2C2C2C;
+  }
+
+  .faq-item {
+    margin-bottom: 1rem;
+    border-left: 4px solid #6FD18C;
+    background-color: #ffffff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  }
+
+  .faq-question {
+    width: 100%;
+    text-align: left;
+    padding: 1rem;
+    font-weight: 600;
+    font-size: 1rem;
+    background-color: #A8E6CF;
+    color: #2C2C2C;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+
+  .faq-question:hover {
+    background-color: #6FD18C;
+    color: white;
+  }
+
+  .faq-answer {
+    padding: 1rem;
+    background-color: #F9FDFB;
+    color: #444;
+    border-top: 1px solid #ddd;
+    font-size: 0.95rem;
+    display: block;
+  }
+
+  .faq-answer .recharts-wrapper {
+    margin-top: 1rem;
+  }

@@ -1,115 +1,119 @@
 /* src/styles/Navbar.css */
 .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 14px 32px;
-    background-color: #ffffff;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
-    font-family: 'Poppins', sans-serif;
-    position: sticky;
-    top: 0;
-    z-index: 999;
-  }
-  
-  .navbar-left .brand {
-    font-size: 24px;
-    font-weight: 600;
-    color: #2C2C2C;
-  }
-  
-  .navbar-center {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 16px;
-  }
-  
-  .navbar-center a {
-    text-decoration: none;
-    color: #2C2C2C;
-    font-weight: 500;
-    padding: 8px 12px;
-    position: relative;
-    transition: all 0.3s ease;
-  }
-  
-  .navbar-center a::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    height: 2px;
-    width: 0%;
-    background-color: #6FD18C;
-    transition: width 0.3s ease;
-  }
-  
-  .navbar-center a:hover::after {
-    width: 100%;
-  }
-  
-  .navbar-center a:hover {
-    color: #4D9375;
-    transform: translateY(-2px);
-  }
-  
-  .navbar-right {
-    display: flex;
-    align-items: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 32px;
+  background-color: #ffffff;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  font-family: 'Poppins', sans-serif;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+
+.navbar-left .brand {
+  font-size: 24px;
+  font-weight: 600;
+  color: #2C2C2C;
+  text-decoration: none; /* ✅ Remove underline */
+}
+
+/* Center Links */
+.navbar-center {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 16px;
+}
+
+.navbar-center a,
+.navbar-center .brand,
+.navbar a {
+  text-decoration: none; /* ✅ Remove underline globally */
+  color: #2C2C2C;
+  font-weight: 500;
+  padding: 8px 12px;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.navbar-center a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 2px;
+  width: 0%;
+  background-color: #6FD18C;
+  transition: width 0.3s ease;
+}
+
+.navbar-center a:hover::after {
+  width: 100%;
+}
+
+.navbar-center a:hover {
+  color: #4D9375;
+  transform: translateY(-2px);
+}
+
+/* Right Section */
+.navbar-right {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.auth-link {
+  color: #254D70;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.auth-link:hover {
+  color: #4D9375;
+  text-decoration: underline;
+}
+
+.username {
+  font-weight: 500;
+  color: #254D70;
+}
+
+.profile-icon {
+  width: 32px;
+  height: 32px;
+  background-color: #6FD18C;
+  color: white;
+  font-weight: bold;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ✅ Responsive */
+@media (max-width: 1024px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
     gap: 12px;
+    padding: 20px;
   }
-  
-  .auth-link {
-    color: #254D70;
-    text-decoration: none;
-    font-weight: 500;
+
+  .navbar-center {
+    flex-wrap: wrap;
+    justify-content: flex-start;
   }
-  
-  .auth-link:hover {
-    color: #4D9375;
-    text-decoration: underline;
+
+  .navbar-right {
+    align-self: flex-end;
   }
-  
-  .username {
-    font-weight: 500;
-    color: #254D70;
+}
+
+@media (max-width: 600px) {
+  .navbar-center {
+    display: none; /* Optional: Hide links on mobile for cleaner UI */
   }
-  
-  .profile-icon {
-    width: 32px;
-    height: 32px;
-    background-color: #6FD18C;
-    color: white;
-    font-weight: bold;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  /* ✅ Responsive */
-  @media (max-width: 1024px) {
-    .navbar {
-      flex-direction: column;
-      align-items: flex-start;
-      gap: 12px;
-      padding: 20px;
-    }
-  
-    .navbar-center {
-      flex-wrap: wrap;
-      justify-content: flex-start;
-    }
-  
-    .navbar-right {
-      align-self: flex-end;
-    }
-  }
-  
-  @media (max-width: 600px) {
-    .navbar-center {
-      display: none; /* Hide links if needed on small screen for cleaner UI */
-    }
-  }
-  
+}

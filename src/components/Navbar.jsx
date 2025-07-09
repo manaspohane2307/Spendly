@@ -1,17 +1,20 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "../styles/Navbar.css";
 
 function Navbar({ isLoggedIn = false, username = "Guest" }) {
   return (
     <nav className="navbar">
       <div className="navbar-left">
-        <span className="brand">Spendly</span>
+        <Link to="/" className="brand">
+          Spendly
+        </Link>
       </div>
 
       <div className="navbar-center">
-        <a href="#dashboard">Dashboard</a>
-        <a href="#income">Income</a>
-        <a href="#expenses">Expenses</a>
+        <Link to="/dashboard">Dashboard</Link>
+        <Link to="/income">Income</Link>
+        <a href="/expenses">Expenses</a>
         <a href="#reports">Reports</a>
         <a href="#trips">Trips</a>
         <a href="#advances">Advances</a>
@@ -28,13 +31,13 @@ function Navbar({ isLoggedIn = false, username = "Guest" }) {
           </>
         ) : (
           <>
-            <a href="/signup" className="auth-link">
+            <Link to="/signup" className="auth-link">
               Sign Up
-            </a>
+            </Link>
             <span>|</span>
-            <a href="/login" className="auth-link">
+            <Link to="/login" className="auth-link">
               Login
-            </a>
+            </Link>
           </>
         )}
       </div>
