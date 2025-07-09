@@ -14,6 +14,9 @@ import Dashboard from "./pages/Dashboard";
 import Income from "./pages/Income";
 import Navbar from "./components/Navbar";
 import Expenses from "./pages/Expenses";
+import Reports from "./pages/Reports";
+import InvoiceGenerator from "./pages/InvoiceGenerator"; 
+import CurrencyConverter from "./pages/CurrencyConvertor";
 
 const AppContent = () => {
   const location = useLocation();
@@ -32,6 +35,9 @@ const AppContent = () => {
         <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/income" element={<Income />} />
         <Route path="/expenses" element={<Expenses />} />
+        <Route path="/reports" element={<Reports />} />
+        <Route path="/invoice" element={<InvoiceGenerator />} />{" "}
+        <Route path="/currency" element={<CurrencyConverter />} />
         <Route path="*" element={<Navigate to="/" />} />
       </Routes>
     </>
