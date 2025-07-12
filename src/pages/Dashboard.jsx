@@ -15,6 +15,7 @@ import {
 } from "recharts";
 
 import "../styles/Dashboard.css";
+import Footer from "../components/Footer.jsx";
 
 const incomeData = [
   { name: "Salary", value: 80000 },
@@ -212,6 +213,7 @@ const Dashboard = () => {
             </ResponsiveContainer>
           </div>
         </div>
+        <Footer />
       </div>
     </div>
   );

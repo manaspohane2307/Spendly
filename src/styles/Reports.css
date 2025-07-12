@@ -116,4 +116,10 @@
   .btn-export:hover {
     background-color: #2e7d32;
   }
+
+  .footer {
+  margin-top: 3rem;
+  text-align: center;
+}
+
   

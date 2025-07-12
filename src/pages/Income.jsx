@@ -13,6 +13,7 @@ import {
   Legend,
 } from "recharts";
 import "../styles/Income.css";
+import Footer from "../components/Footer";
 import { FiPlus } from "react-icons/fi";
 import { CSVLink } from "react-csv";
 
@@ -265,6 +266,7 @@ const Income = () => {
           </div>
         </div>
       )}
+      <Footer/>
     </div>
   );
 };

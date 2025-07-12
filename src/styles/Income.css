@@ -231,6 +231,12 @@
   .modal-btn.cancel:hover {
     background-color: #aaa;
   }
+
+  .footer {
+  margin-top: 3rem;
+  text-align: center;
+  }
+
   
   /* Responsive Design */
   @media (max-width: 768px) {
