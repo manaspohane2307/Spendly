@@ -10,16 +10,16 @@
   position: sticky;
   top: 0;
   z-index: 999;
+  transition: background-color 0.3s ease;
 }
 
 .navbar-left .brand {
   font-size: 24px;
   font-weight: 600;
   color: #2C2C2C;
-  text-decoration: none; /* ✅ Remove underline */
+  text-decoration: none;
 }
 
-/* Center Links */
 .navbar-center {
   display: flex;
   flex-wrap: wrap;
@@ -28,9 +28,8 @@
 }
 
 .navbar-center a,
-.navbar-center .brand,
 .navbar a {
-  text-decoration: none; /* ✅ Remove underline globally */
+  text-decoration: none;
   color: #2C2C2C;
   font-weight: 500;
   padding: 8px 12px;
@@ -58,7 +57,6 @@
   transform: translateY(-2px);
 }
 
-/* Right Section */
 .navbar-right {
   display: flex;
   align-items: center;
@@ -93,7 +91,28 @@
   justify-content: center;
 }
 
-/* ✅ Responsive */
+/* ✅ Theme Toggle Button */
+.theme-toggle button {
+  background-color: #2e7d32;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  font-size: 0.9rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.theme-toggle button:hover {
+  background-color: #1b5e20;
+}
+
+/* Margin to separate from profile or auth */
+.navbar-right .theme-toggle {
+  margin-right: 0.5rem;
+}
+
+/* ✅ Responsive Design */
 @media (max-width: 1024px) {
   .navbar {
     flex-direction: column;
@@ -114,6 +133,37 @@
 
 @media (max-width: 600px) {
   .navbar-center {
-    display: none; /* Optional: Hide links on mobile for cleaner UI */
+    display: none; /* Optional: Hide links on mobile */
+  }
+}
+
+/* ✅ Dark Mode Support */
+@media (prefers-color-scheme: dark) {
+  .navbar {
+    background-color: #1a1a1a;
+  }
+
+  .navbar a,
+  .navbar-center a,
+  .auth-link,
+  .username {
+    color: #eeeeee;
+  }
+
+  .navbar-center a:hover::after {
+    background-color: #90ee90;
+  }
+
+  .profile-icon {
+    background-color: #43a047;
+  }
+
+  .theme-toggle button {
+    background-color: #388e3c;
+    color: white;
+  }
+
+  .theme-toggle button:hover {
+    background-color: #2e7d32;
   }
 }

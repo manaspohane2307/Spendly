@@ -17,6 +17,8 @@ import Expenses from "./pages/Expenses";
 import Reports from "./pages/Reports";
 import InvoiceGenerator from "./pages/InvoiceGenerator"; 
 import CurrencyConverter from "./pages/CurrencyConvertor";
+import Trips from "./pages/Trips";
+import Advances from "./pages/Advances";
 
 const AppContent = () => {
   const location = useLocation();
@@ -38,6 +40,8 @@ const AppContent = () => {
         <Route path="/reports" element={<Reports />} />
         <Route path="/invoice" element={<InvoiceGenerator />} />{" "}
         <Route path="/currency" element={<CurrencyConverter />} />
+        <Route path="/trips" element={<Trips />} />
+        <Route path="/advances" element={<Advances />} />
         <Route path="*" element={<Navigate to="/" />} />
       </Routes>
     </>

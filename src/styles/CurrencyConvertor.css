@@ -1,0 +1,81 @@
+/* src/styles/CurrencyConvertor.css */
+
+.converter-container {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background-color: #f4fff7;
+  color: #1b3d2f;
+  font-family: "Segoe UI", sans-serif;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 128, 0, 0.1);
+}
+
+.converter-heading {
+  text-align: center;
+  color: #2e7d32;
+  font-size: 2.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.converter-subtext {
+  text-align: center;
+  font-size: 1rem;
+  color: #3e574b;
+  margin-bottom: 2rem;
+}
+
+.converter-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  background: #e1f5e3;
+  padding: 1.5rem;
+  border-radius: 10px;
+}
+
+.converter-form label {
+  display: flex;
+  flex-direction: column;
+  font-weight: 500;
+  color: #204b33;
+}
+
+.converter-form input,
+.converter-form select {
+  padding: 0.5rem;
+  margin-top: 0.3rem;
+  border-radius: 5px;
+  border: 1px solid #90ee90;
+}
+
+.btn-generate {
+  background-color: #2e7d32;
+  color: white;
+  padding: 0.7rem 1.2rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s ease;
+  width: fit-content;
+}
+
+.btn-generate:hover {
+  background-color: #1b5e20;
+}
+
+.converted-output {
+  margin-top: 2rem;
+  background: #ffffff;
+  padding: 1.5rem;
+  border-left: 6px solid #2e7d32;
+  border-radius: 8px;
+  text-align: center;
+  font-size: 1.1rem;
+}
+
+.loading-text {
+  color: #2e7d32;
+  font-style: italic;
+}
